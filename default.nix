@@ -1,8 +1,5 @@
-{
-  sources ? import ./nix/sources.nix,
-}:
 let
-  lib = import (sources.nixpkgs + "/lib");
+  lib = import <nixpkgs/lib>;
 in
 lib.fileset.toSource {
   root = ./.;
